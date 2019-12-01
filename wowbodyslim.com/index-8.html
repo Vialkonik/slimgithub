@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Сайт wowbody.com.ua</title>
+    <meta name="description" content="Інформація про сайт wowbody.com.ua недоступна">
+
+    <meta name="robots" content="noindex">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Сайт wowbody.com.ua">
+    <meta property="og:image" content="https://mirohost.net/i/logo-mirohost.png">
+    <meta property="og:description" content="Інформація про сайт wowbody.com.ua недоступна">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            color: #000;
+            font-size: 16px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .layout {
+            position: relative;
+            flex: 1 0 auto;
+        }
+        .reducer {
+            max-width: 1280px;
+            padding: 0 20px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            height: 54px;
+            padding-top: 18px;
+            position: relative;
+            background: #fff;
+            margin-bottom: 30px;
+        }
+        .header_cols {
+            display: flex;
+            justify-content: space-between;
+        }
+        .header_col {
+        }
+        .logo {
+            display: block;
+            text-decoration: none;
+        }
+        .logo img {
+            vertical-align: top;
+        }
+        .logo_txt {
+            display: inline-block;
+            padding-top: 4px;
+            font-weight: 400;
+            font-size: 14px;
+            padding-bottom: 0;
+            color: #464646;
+        }
+        .header_contacts {
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .header_contacts a {
+            text-decoration: none;
+            color: #000;
+            white-space: nowrap;
+            font-weight: 400;
+            background: url('https://static.mirohost.net/i/ic_phone_gray.svg') 0 50% no-repeat;
+            padding-left: 30px;
+        }
+        .header_contacts span {
+            text-decoration: none;
+            color: #b00015;
+            border-bottom: 1px solid #b00015;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .header_contacts_link {
+            font-size: 20px;
+            line-height: 20px;
+            text-align: right;
+        }
+        .header_contacts_link a {
+            text-decoration: none;
+            color: #000;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+        /* Header */
+        section {
+            display: flex;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 40px;
+            margin-bottom: 32px;
+        }
+        p, .paragrahp {
+            margin-bottom: 22px;
+            font-size: 20px;
+            line-height: 1.4;
+            color: #333333;
+        }
+        ul.paragrahp {
+            margin-left: 22px;
+        }
+        main {
+            margin: 0 220px 0 0;
+        }
+        .left {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -moz-justify-content: space-evenly;
+            -ms-justify-content: space-evenly;
+            justify-content: space-evenly;
+            -ms-flex-pack: center;
+        }
+        .right {
+            flex: 0 0 396px;
+        }
+
+        .additional {
+            padding-right: 100px;
+            z-index: 100;
+        }
+        .buttons {
+            font-size: 0;
+            display: flex;
+            justify-content: space-between;
+            max-width: 650px;
+        }
+        .button_block {
+            line-height: 60px;
+            font-size: 20px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .button_block.indent {
+            padding: 0;
+        }
+        .button_block a {
+            padding: 0 40px;
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+        }
+        .button_block .mirohost {
+            background: #B00015;
+        }
+        .button_block .imena {
+            background: #03a9f4;
+        }
+
+        nav {
+            line-height: 28px;
+            margin: 40px 0 40px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav li {
+            font-size: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #9a9494;
+        }
+
+        footer {
+            flex-shrink: 0;
+            background: #f7f7f7;
+        }
+
+        @media screen and (max-width: 1100px) {
+            main,
+            .additional {
+                padding-right: 30px;
+                margin: 0;
+            }
+            .button_block {
+                line-height: 50px;
+                font-size: 18px;
+                width: 42%;
+                text-align: center;
+            }
+            .button_block.indent {
+                width: auto;
+            }
+            .button_block a {
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .button_block {
+                line-height: 50px;
+                font-size: 16px;
+            }
+            .button_block.indent,
+            .button_block a {
+            }
+            main,
+            .additional {
+                padding-right: 20px;
+            }
+        }
+        @media screen and (max-width: 860px) {
+            section {
+                display: block;
+            }
+            main {
+                padding: 40px 0;
+            }
+            .left {
+                padding-bottom: 0;
+            }
+            .additional {
+                padding-right: 0;
+            }
+            .buttons {
+                font-size: 0;
+                max-width: 100%;
+            }
+            .button_block {
+                line-height: 60px;
+            }
+            .right {
+                padding-top: 48px;
+                text-align: center;
+            }
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            header {
+                margin-bottom: 15px;
+            }
+            .logo_txt {
+                font-size: 12px;
+            }
+            .header_contacts,
+            .header_contacts_link {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            h1 {
+                font-size: 26px;
+                line-height: 33px;
+            }
+            nav li {
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .header_cols {
+                display: block;
+                overflow: hidden;
+            }
+            .header_col {
+                margin-left: 190px;
+                margin-bottom: 5px;
+            }
+            .header_col:first-child {
+                margin-left: 0;
+                float: left;
+                margin-right: -100%;
+            }
+            .header_contacts,
+            .header_contacts_link {
+                text-align: right;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+            main {
+                padding-bottom: 25px;
+            }
+            nav {
+                line-height: 40px;
+                margin-top: 15px;
+            }
+            nav li {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo,
+            .logo img {
+                width: 120px;
+                text-align: center;
+            }
+            .logo_txt {
+                font-size: 9px;
+            }
+            .header_col {
+                margin-left: 120px;
+            }
+            .header_contacts,
+            .header_contacts_link {
+                font-size: 12px;
+            }
+            .buttons {
+                text-align: center;
+                display: block;
+            }
+            .button_block.indent {
+                display: block;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .button_block {
+                width: 100%;
+            }
+            .button_block a {
+                width: 100%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .fb_iframe_widget {
+                width: 100% !important;
+                display: block !important;
+                position: relative !important;
+            }
+            .fb_iframe_widget span {
+                width: 100% !important;
+                display: block !important;
+                position: relative !important;
+            }
+            .fb_iframe_widget span iframe[style] {
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+            }
+
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            main {
+                padding-bottom: 25px;
+            }
+            nav {
+                line-height: 26px;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            nav li {
+                font-size: 9px;
+            }
+            p, .paragrahp {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1" />
+</head>
+<body>
+    <div class="layout">
+        <header>
+            <div class="reducer ovh">
+                <div class="header_cols">
+                    <div class="header_col">
+                        <a href="https://mirohost.net/?utm_source=site_inactive&utm_medium=referral&utm_campaign=logo" class="logo">
+                            <img width="160" src="https://static.mirohost.net/i/logo.svg" alt=""><br>
+                            <span class="logo_txt">Найбільший хостинг в Україні</span>
+                        </a>
+                    </div>
+                    <div class="header_col">
+                        <div class="header_contacts" itemscope="" itemtype="http://schema.org/Organization">
+                            <div class="header_contacts_phone">
+                                <noindex>
+                                    <a href="tel:+380442010102" itemprop="telephone" rel="nofollow">+380 (44) 201-01-02</a>
+                                </noindex>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <div class="reducer">
+            <section>
+                <div class="left">
+                    <main>
+                        <h1>Сайт wowbody.com.ua<br />наразі недоступний.</h1>
+                                        <p>Це могло статися з наступних причин:</p>
+                                        <ul class="paragrahp">
+                                            <li>Закінчився термін дії послуги хостингу.</li>
+                                            <li>Власник самостійно вимкнув свій сайт.</li>
+                                            <li>Сайт заблоковано за порушення правил користування послугою хостингу.</li>
+                                        </ul>
+                                        <p>Якщо ви є власником сайту, ви можете продовжити дію послуги або
+                                            активувати сайт в <a
+                                                href="https://control.mirohost.net/auth/login?lang=ua">панелі керування</a>.
+                                        </p>
+                    </main>
+                    <div class="additional">
+                        <p>А поки що ви можете:</p>
+                        <div class="buttons">
+                            <div class="button_block">
+                                <a href="https://mirohost.net/?utm_source=site_inactive&utm_medium=referral&utm_campaign=button" class="mirohost">Придбати хостинг</a>
+                            </div>
+                            <div class="button_block indent">або</div>
+                            <div class="button_block">
+                                <a href="https://www.imena.ua/?utm_source=site_inactive&utm_medium=referral&utm_campaign=button" class="imena">Підібрати домен</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div id="fb-root"></div>
+                    <div class="fb-page" data-href="https://www.facebook.com/blogimenaua/" data-tabs="timeline" data-width="396" data-height="700" data-small-header="false" data-hide-cover="false" data-show-facepile="true" data-adapt-container-width="true">
+                        <blockquote cite="https://www.facebook.com/blogimenaua/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/blogimenaua/"></a>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="reducer">
+            <nav>
+                <ul>
+                    <li><a href="https://www.imena.ua/?utm_source=site_inactive&utm_medium=referral&utm_campaign=footer">Реєстрація доменів</a></li>
+                    <li><a href="https://mirohost.net/?utm_source=site_inactive&utm_medium=referral&utm_campaign=footer">Хостинг</a></li>
+                    <li><a href="https://mirohost.net/vps?utm_source=site_inactive&utm_medium=referral&utm_campaign=footer"><span>e</span>VPS</a></li>
+                    <li><a href="https://mirohost.net/servers?utm_source=site_inactive&utm_medium=referral&utm_campaign=footer">Сервери</a></li>
+                    <li><a href="https://mirohost.net/colocation?utm_source=site_inactive&utm_medium=referral&utm_campaign=footer">Colocation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1&appId=182263462421643&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

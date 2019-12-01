@@ -1,0 +1,83 @@
+.pagination li.disabled {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.delivery-group.has-error .form-control-checkmark,
+.payment-group.has-error .form-control-checkmark {
+    border: 1px solid #ff2f74;
+}
+
+#order-form-delivery-payment .hidden-input {
+    margin-top: 5px;
+}
+
+/* fix article mobile image */
+
+.article__content img {
+    height: auto;
+}
+
+/* fix cabinet played FF and Safari border square */
+.vjs-resize-manager {
+    display: none;
+}
+
+.recommend .centered {
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    .faq.payment-info > .faq__btn {
+        top: unset;
+    }
+}
+
+@media (max-width: 767px) {
+    .contains-iframe iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .article__sharing.reset-top {
+        top: 0px;
+    }
+}
+
+.modal .modal__content .title-reset-uppercase {
+    text-transform: none;
+}
+
+.currency-hint {
+    display: block;
+    margin: 15px 0 0 0;
+    color: #000000;
+    font-size: 0.9em;
+    font-family: Arial,sans-serif;
+}
+
+.contain-video-before-program iframe {
+    width: 560px;
+    height: 300px;
+}
+
+@media (max-width: 767px) {
+    .contain-video-before-program iframe {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* nutrition status bar backend temporary fix */
+@media (max-width: 767px) {
+    .apple-bar__actions.is_marked_status {
+        height: 10px;
+    }
+}
+/* fix week-show view for vertical lines */
+.without__outline .entry-4__start-el:nth-child(5)~.entry-4__start-el:before {
+    bottom:-102px;
+}
